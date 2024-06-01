@@ -1,0 +1,53 @@
+<form action="">
+    <div class="columns" id="cont">
+        <div class="column" id="inner-cont">
+            <div class="card is-spaced">
+                <div class="field">
+                    <h1 id="rem-point" class="title is-2">Add courses</h1>
+                </div>
+                
+                <div class="field">
+                    <label class="label">Course name</label>
+                    <div class="control">
+                    <input class="input is-success" type="text" id="course" name="course" [(ngModel)]="courseForm.course">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Branch</label>
+                    <div class="control">
+                    <input class="input is-success" type="text" id="branch" name="branch" [(ngModel)]="courseForm.branch">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">No. of years</label>
+                    <div class="control">
+                    <input class="input is-success" type="number" id="years" name="years" [(ngModel)]="courseForm.years">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <button (click)="addCard()" class="button is-info is-medium">+ Add</button>
+                    </div>
+                </div>
+            
+                <div class="field sub">
+                    <div class="control">
+                        <button (click)="setData()" class="button is-primary is-large">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="scroll" class="column">
+            <div class="container" *ngFor="let item of coursesArray">
+                <div id="card-cont" class="card">
+                    <p class="text big"><b>{{ item.course }}</b></p>
+                    <p class="text">Branch: {{ item.branch }}</p>
+                    <p class="text">Duration: {{ item.years }} years</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

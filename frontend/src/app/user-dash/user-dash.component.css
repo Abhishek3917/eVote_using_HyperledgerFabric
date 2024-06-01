@@ -1,0 +1,22 @@
+html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.back {
+    background-color: #eff2f6;
+    height: 100vh;
+    width: 100%;
+}
+
+.border {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    background-color: #00d1b2;
+    position: fixed;
+    margin-left: 252px;
+    margin-top: -3px;
+}

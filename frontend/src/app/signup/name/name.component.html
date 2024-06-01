@@ -1,0 +1,30 @@
+<h1 class="title is-2">Enter your name</h1>
+<form name="nameForm" [formGroup] = "nameForm" novalidate> 
+    <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="first_name" name="first_name" formControlName="first_name">
+        </div>
+        <div *ngIf="nameForm.controls['first_name'].invalid && (nameForm.controls['first_name'].touched || nameForm.controls['first_name'].dirty)">
+            <p class="has-text-danger" *ngIf="nameForm.controls['first_name'].errors?.['required']">This field is required!</p>
+        </div>
+        
+    </div> 
+
+    <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="last_name" formControlName="last_name">
+        </div>
+        <div *ngIf="nameForm.controls['last_name'].invalid && (nameForm.controls['last_name'].touched || nameForm.controls['last_name'].dirty)">
+            <p class="has-text-danger" *ngIf="nameForm.controls['last_name'].errors?.['required']">This field is required!</p>
+        </div>
+    </div> 
+    
+    <div class="field">
+        <div class="control">
+            <button class="button is-primary is-medium" routerLink="/signup/details" (click)="test()" [disabled]="!nameForm.valid">Next &#11208;</button>
+            <!-- (click)="register(username.value, email.value, password.value, first_name.value, last_name.value, mob_no.value, college_id.value, course.value)" -->
+        </div>
+    </div>
+</form>  

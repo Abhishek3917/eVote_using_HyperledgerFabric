@@ -1,0 +1,20 @@
+#cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: flex;
+    flex-direction: row;
+    background-color: #eff2f6;
+    height: 100vh;
+}
+
+.card {
+    margin-top: -4%;
+    width: 500px;
+    height: 550px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+} 

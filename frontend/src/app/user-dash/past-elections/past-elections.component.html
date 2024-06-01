@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="container">
+        <div class="card" *ngFor="let item of pastElecs">
+            <p>{{ item.election_name }}</p>
+            <button (click)="showResult(item.election_name)" class="button is-primary">Show Result</button>
+        </div>
+    </div>
+</div>
+<div id="relative" class="hide"> 
+<div class="card" id="popup">
+    <p class="text is-uppercase is-size-3">{{ curElection }}</p>
+    <div id="inner-cont">
+        <div class="card">
+            <p class="text">{{result.cand_name}}</p>
+            <p>Winning votes:{{ result.votes }}</p>
+        </div> 
+        <button (click)="close()" id="closeButton" class="button is-primary is-large">Close</button>
+    </div>
+</div>
+</div>

@@ -1,0 +1,78 @@
+<h1 class="title is-2">Election admin details</h1>
+<form name="adminForm" [formGroup] = "adminForm" novalidate> 
+    <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="first_name" name="first_name" formControlName="first_name">
+        </div>
+        <div *ngIf="adminForm.controls['first_name'].invalid && (adminForm.controls['first_name'].touched || adminForm.controls['first_name'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['first_name'].errors?.['required']">This field is required!</p>
+        </div>
+    </div> 
+
+    <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="last_name" formControlName="last_name">
+        </div>
+        <div *ngIf="adminForm.controls['last_name'].invalid && (adminForm.controls['last_name'].touched || adminForm.controls['last_name'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['last_name'].errors?.['required']">This field is required!</p>
+        </div>
+    </div> 
+
+    <div class="field">
+        <label class="label">Phone number</label>
+        <div class="control">
+            <input class="input is-success form-control" type="number" id="phone_no" formControlName="phone_no">
+        </div>
+        <div *ngIf="adminForm.controls['phone_no'].invalid && (adminForm.controls['phone_no'].touched || adminForm.controls['phone_no'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['phone_no'].errors?.['required']">This field is required!</p>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">E-Mail</label>
+        <div class="control">
+            <input class="input is-success form-control" type="email" id="email" formControlName="email">
+        </div>
+        <div *ngIf="adminForm.controls['email'].invalid && (adminForm.controls['email'].touched || adminForm.controls['email'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['email'].errors?.['required']">This field is required!</p>
+            <p class="has-text-danger" *ngIf="adminForm.controls['email'].errors?.['email']">Please enter a valid E-Mail address</p>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+            <input class="input is-success form-control" type="password" id="password" formControlName="password">
+        </div>
+        <div *ngIf="adminForm.controls['password'].invalid && (adminForm.controls['password'].touched || adminForm.controls['password'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['password'].errors?.['required']">This field is required!</p>
+            <div class="content has-text-danger" *ngIf="adminForm.controls['password'].errors?.['passwordStrength']">
+              <p>Password must contain:</p>
+              <ul>
+                <li>Atleast one uppercase character</li>
+                <li>Atleast one lowercase character</li>
+                <li>Atleast one number</li>
+              </ul>
+            </div>
+          </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Confirm Password</label>
+        <div class="control">
+            <input class="input is-success form-control" type="password" id="confPassword" formControlName="confPassword">
+        </div>
+        <div *ngIf="adminForm.controls['confPassword'].invalid && (adminForm.controls['confPassword'].touched || adminForm.controls['confPassword'].dirty)">
+            <p class="has-text-danger" *ngIf="adminForm.controls['confPassword'].errors?.['required']">This field is required!</p>
+        </div>
+    </div>
+    
+    <div class="field">
+        <div class="control">
+            <button class="button is-primary is-medium" routerLink="/college-signup/college-details" (click)="test()" [disabled]="!adminForm.valid">Next &#11208;</button>
+            <!-- (click)="register(username.value, email.value, password.value, first_name.value, last_name.value, mob_no.value, college_id.value, course.value)" -->
+        </div>
+    </div>
+</form>  

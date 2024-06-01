@@ -1,0 +1,12 @@
+#large {
+    font-size: 20px;
+}
+
+#cont {
+    background-color: #eff2f6;
+    height: 100vh;
+}
+
+.card {
+    margin-bottom: 5%;
+}

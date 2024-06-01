@@ -1,0 +1,59 @@
+<h1 class="title is-2">College details</h1>
+<form name="collegeDetailsForm" [formGroup] = "collegeDetailsForm" novalidate> 
+    <div class="field">
+        <label class="label">College Name</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="college_name" name="college_name" formControlName="college_name">
+        </div>
+        <div *ngIf="collegeDetailsForm.controls['college_name'].invalid && (collegeDetailsForm.controls['college_name'].touched || collegeDetailsForm.controls['college_name'].dirty)">
+            <p class="has-text-danger" *ngIf="collegeDetailsForm.controls['college_name'].errors?.['required']">This field is required!</p>
+        </div>
+    </div> 
+
+    <div class="field">
+        <label class="label">City</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="city" formControlName="city">
+        </div>
+        <div *ngIf="collegeDetailsForm.controls['city'].invalid && (collegeDetailsForm.controls['city'].touched || collegeDetailsForm.controls['city'].dirty)">
+            <p class="has-text-danger" *ngIf="collegeDetailsForm.controls['city'].errors?.['required']">This field is required!</p>
+        </div>
+    </div> 
+
+    <div class="field">
+        <label class="label">District</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="district" formControlName="district">
+        </div>
+        <div *ngIf="collegeDetailsForm.controls['district'].invalid && (collegeDetailsForm.controls['district'].touched || collegeDetailsForm.controls['district'].dirty)">
+            <p class="has-text-danger" *ngIf="collegeDetailsForm.controls['district'].errors?.['required']">This field is required!</p>
+        </div>
+    </div>
+    
+    <div class="field">
+        <label class="label">Country</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="country" formControlName="country">
+        </div>
+        <div *ngIf="collegeDetailsForm.controls['country'].invalid && (collegeDetailsForm.controls['country'].touched || collegeDetailsForm.controls['country'].dirty)">
+            <p class="has-text-danger" *ngIf="collegeDetailsForm.controls['country'].errors?.['required']">This field is required!</p>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Pincode</label>
+        <div class="control">
+            <input class="input is-success form-control" type="text" id="pincode" formControlName="pincode">
+        </div>
+        <div *ngIf="collegeDetailsForm.controls['pincode'].invalid && (collegeDetailsForm.controls['pincode'].touched || collegeDetailsForm.controls['pincode'].dirty)">
+            <p class="has-text-danger" *ngIf="collegeDetailsForm.controls['pincode'].errors?.['required']">This field is required!</p>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <button class="button is-primary is-medium" (click)="test()" [disabled]="!collegeDetailsForm.valid">Submit</button>
+            <!-- (click)="register(username.value, email.value, password.value, first_name.value, last_name.value, mob_no.value, college_id.value, course.value)" -->
+        </div>
+    </div>
+</form>  

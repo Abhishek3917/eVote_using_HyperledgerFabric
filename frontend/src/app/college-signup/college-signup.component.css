@@ -1,0 +1,18 @@
+#cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: flex;
+    flex-direction: row;
+}
+
+.card {
+    width: 700px;
+    height: 700px;
+    margin-top: -2%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+} 

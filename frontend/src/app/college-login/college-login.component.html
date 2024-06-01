@@ -1,0 +1,27 @@
+<div id="cont">
+    <div class="card is-spaced">
+        <div class="field">
+            <h1 id="rem-point" class="title is-2">Welcome back<span id="color"> !</span></h1>
+        </div>
+        
+        <div class="field">
+            <label id="rem-point" class="label">E-mail</label>
+            <div class="control">
+                <input class="input" type="email" placeholder="E-Mail" #email>
+            </div>
+        </div>
+        
+        <div class="field">
+            <label id="rem-point" class="label">Password</label>
+            <div class="control">
+                <input class="input" type="password" placeholder="*************" #password>
+            </div>
+        </div>
+        
+        <div class="field">
+            <div class="control">
+                <button (click)="login(email.value, password.value)" class="button is-primary is-medium">Login</button>
+            </div>
+        </div>
+    </div>
+</div>

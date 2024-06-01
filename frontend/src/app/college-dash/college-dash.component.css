@@ -1,0 +1,7 @@
+/* #cont{
+    overflow: auto;
+} */
+
+router-outlet {
+    background-color: #eff2f6;
+}

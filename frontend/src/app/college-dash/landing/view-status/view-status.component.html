@@ -1,0 +1,17 @@
+<div class="outer">
+    <div class="flex">
+        <p class="text is-size-3 is-upercase">{{ elecName }}</p>
+        <button (click)="back()" class="button is-primary">Return</button>
+    </div>
+    <div id="inner-cont" class="container columns">
+        <div class="column" *ngFor="let item of candsFil">
+            <div class="container">
+                <div class="card">
+                    <p class="text is-size-3">{{item.cand_name}}</p>
+                    <p class="text is-size-5">{{item.election_promise}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button (click)="stopElec()" class="button is-large is-danger">STOP ELECTION</button>
+</div>

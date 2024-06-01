@@ -1,0 +1,66 @@
+<form formName="collegeForm"></form>
+    <div id="cont">
+    <div class="card is-spaced">
+        <div class="field">
+            <h1 id="rem-point" class="title is-2">Select your college</h1>
+        </div>
+        
+        <div class="level">
+            <div class="level-item">
+                <div class="field has-addons">
+                        <div class="control select">
+                            <select (change)="getCollegeValue($event)">
+                                <option>Select College</option>
+                                <option *ngFor="let item of colleges" (value)="item.college_name">{{item.college_name}}</option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="level">
+            <div class="level-item">
+                <div class="field has-addons">
+                        <div class="control select">
+                            <select (change)="getCourseValue($event)">
+                                <option>Select Course</option>
+                                <option *ngFor="let item of coursesFil" (value)="item">{{item}}</option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="level">
+            <div class="level-item">
+                <div class="field has-addons">
+                        <div class="control select">
+                            <select (change)="getBranchValue($event)">
+                                <option>Select Branch</option>
+                                <option *ngFor="let item of branchesFil" (value)="item">{{item}}</option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="level">
+            <div class="level-item">
+                <div class="field has-addons">
+                        <div class="control select">
+                            <select (change)="getYearValue($event)">
+                                <option>Year of study</option>
+                                <option *ngFor="let item of year" (value)="item">{{item}}</option>
+                            </select>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toright" class="field">
+            <div class="control">
+                <button (click)="sendRequest()" class="button is-primary is-medium">Send request</button>
+            </div>
+        </div>
+    </div>
+    </div>

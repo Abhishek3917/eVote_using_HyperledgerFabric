@@ -1,0 +1,84 @@
+<div class="container back">
+    <div class="columns">
+        <div class="column">
+            <section class="hero is-primary welcome is-small">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Hello, {{ userObj.first_name }}.
+                        </h1>
+                        <h2 class="subtitle">
+                            Lets keep your voice heard!
+                        </h2>
+                    </div>
+                </div>
+            </section>
+            <section class="info-tiles">
+                <div class="tile is-ancestor has-text-centered">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <a class="button check is-link is-large" disabled="buttonStatus" routerLink="/user-dash/elections">Elections</a>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <a class="button check is-info is-large" disabled="buttonStatus" routerLink="/user-dash/past-elections" >Past votes</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <div class="columns">
+                <div class="column is-6">
+                    <div class="card">  
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="card events-card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Notifications
+                            </p>
+                            <a href="#" class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </header>
+                        <div class="card-table">
+                            <div class="content">
+                                <table class="table is-fullwidth is-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td>demo notification 1</td>
+                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td>demo notification 2</td>
+                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td>demo notification 3</td>
+                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                            <td>demo notification 4</td>
+                                            <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item">View All</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

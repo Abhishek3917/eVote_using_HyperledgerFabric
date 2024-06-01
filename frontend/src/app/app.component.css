@@ -1,0 +1,18 @@
+.logo-img {
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.navBarLine {
+    width: 100%;
+    height: 10%;
+    border: 2px solid hsl(171, 100%, 41%);
+    margin: 70px 0px -30px -1400px;
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,55 @@
+<h1 class="title is-2">One last step...</h1>
+<form name="accountDetailsForm" id="center" [formGroup] = "accountDetailsForm"> 
+    <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+          <input class="input is-success form-control" type="text" id="username" formControlName = "username">
+        </div>
+        <div *ngIf="accountDetailsForm.controls['username'].invalid && (accountDetailsForm.controls['username'].touched || accountDetailsForm.controls['username'].dirty)">
+          <p class="has-text-danger" *ngIf="accountDetailsForm.controls['username'].errors?.['required']">This field is required!</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input is-success form-control" type="email" id="email" formControlName = "email">
+        </div>
+        <div *ngIf="accountDetailsForm.controls['email'].invalid && (accountDetailsForm.controls['email'].touched || accountDetailsForm.controls['email'].dirty)">
+          <p class="has-text-danger" *ngIf="accountDetailsForm.controls['email'].errors?.['required']">This field is required!</p>
+          <p class="has-text-danger" *ngIf="accountDetailsForm.controls['email'].errors?.['email']">Please enter a valid email address!</p>
+        </div>
+      </div> 
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input is-success form-control" type="password" id="password" formControlName = "password">
+        </div>
+        <div *ngIf="accountDetailsForm.controls['password'].invalid && (accountDetailsForm.controls['password'].touched || accountDetailsForm.controls['password'].dirty)">
+          <p class="has-text-danger" *ngIf="accountDetailsForm.controls['password'].errors?.['required']">This field is required!</p>
+          <div class="content has-text-danger" *ngIf="accountDetailsForm.controls['password'].errors?.['passwordStrength']">
+            <p>Password must contain:</p>
+            <ul>
+              <li>Atleast one uppercase character</li>
+              <li>Atleast one lowercase character</li>
+              <li>Atleast one number</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Confirm password</label>
+        <div class="control">
+          <input class="input is-success form-control" type="password" id="conf-password" formControlName="confPassword">
+        </div>
+      </div>
+
+    <div class="field">
+        <div class="control">
+            <a class="button is-primary is-medium" (click)="register()">Submit</a>
+            <!-- (click)="register(username.value, email.value, password.value, first_name.value, last_name.value, mob_no.value, college_id.value, course.value)" -->
+        </div>
+    </div>
+</form>  

@@ -1,0 +1,38 @@
+.ran {
+    background-color: #eff2f6;
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#line {
+    margin: -20px 0px 0px 0px;
+    width: 325px;
+    height: 5px;
+    background-color: hsl(171, 100%, 41%);
+    animation: enlarge 1s;
+} 
+
+.card-image {
+    margin: 0px 0px 0px 80px;
+    height: 500px;
+    width: 600px;
+}
+#container {
+    margin: 200px 0px 0px 100px;
+}
+
+@keyframes  enlarge {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 325px;
+    }
+}

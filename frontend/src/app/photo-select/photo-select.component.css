@@ -1,0 +1,32 @@
+#cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eff2f6;
+    height: 100vh;
+}
+
+.card {
+    width: 600px;
+    height: 400px;
+    margin-top: -7%;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+} 
+
+#color{
+    color: #00d1b2;
+}
+
+.field{
+    margin-bottom: 30px;
+} 
+
+#rem-point{
+    pointer-events: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

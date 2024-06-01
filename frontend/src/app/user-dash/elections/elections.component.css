@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+}
+
+.card {
+    width: 50%;
+    height: 30%;
+    margin: 5%;
+    padding: 2%;
+} 
+
+#relative {
+    position: relative;
+    margin-top: -10%;
+}
+
+.hide{
+    display: none;
+}
+
+#popup {
+    border: 6px solid #00d1b2;
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -500px;
+    left: 50%;
+}
+
+#inner-cont {
+    display: flex;
+    flex-direction: row;
+    margin-left: -5%;
+    margin-top: 10%;
+} 
+
+#inner-cont .card {
+    width: 30%;
+    height: 150px;
+    margin-right: -3%;
+} 
+
+.text {
+    margin-bottom: 10%;
+} 
+
+#butt {
+    margin-top: 20%;
+    margin-bottom: 10%;
+} 
+
+#closeButton {
+    margin-top: 50%;
+    margin-left: -53%;
+}

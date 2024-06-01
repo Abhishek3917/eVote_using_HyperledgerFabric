@@ -1,0 +1,41 @@
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item logo-img" href="https://www.google.com/search?q=e-voting with blockchain&sca_esv=585187660&sxsrf=AM9HkKm9xr8v9nu5dz14a51PCF0TzywsaQ%3A1700891033366&source=hp&ei=mYlhZeCBFKqBvr0PgrG52AM&iflsig=AO6bgOgAAAAAZWGXqQi2P1jQFGsKjAiXQ-lMwOrN8L6_&ved=0ahUKEwigst_uuN6CAxWqgK8BHYJYDjsQ4dUDCAo&uact=5&oq=dfsdfsd&gs_lp=Egdnd3Mtd2l6IgdkZnNkZnNkMgoQABiABBiKBRhDMgUQABiABDINEAAYgAQYsQMYgwEYCjINEAAYgAQYsQMYgwEYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCjIHEAAYgAQYCkjhBlAAWIsFcAB4AJABAJgBngGgAd0GqgEDMC43uAEDyAEA-AEBwgIEECMYJ8ICChAjGIAEGIoFGCfCAgoQLhiABBiKBRgnwgILEAAYgAQYigUYkQLCAgsQABiABBixAxiDAcICDhAuGIAEGIoFGLEDGIMBwgIIEC4YgAQYsQPCAhAQABiABBiKBRixAxiDARhDwgIIEAAYgAQYsQPCAg4QLhiABBixAxjHARjRA8ICEBAuGIAEGIoFGMcBGNEDGEPCAhEQLhiABBixAxiDARjHARivAcICDRAAGIAEGIoFGLEDGEM&sclient=gws-wiz">
+        <img src="../assets/images/logo.png" width="100">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" *ngIf="urlCheck == true" routerLink="/signup/name" routerLinkActive="hide">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-primary" *ngIf="urlCheck == true" routerLink="/login" routerLinkActive="hide">
+                        <strong>Log in</strong>
+                    </a>
+                    <a class="button is-primary" *ngIf="urlCheck3 == true" routerLink="/college-signup/admin-details" routerLinkActive="hide">
+                        <strong>Sign up</strong>
+                    </a>
+                    <a class="button is-primary" *ngIf="urlCheck4 == true" routerLink="/college-login" routerLinkActive="hide">
+                        <strong>Log in</strong>
+                    </a>
+                    <a (click)="logout()" class="button is-primary" *ngIf="urlCheck2 == true" routerLinkActive="hide">
+                        <strong>Log out</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navBarLine">
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

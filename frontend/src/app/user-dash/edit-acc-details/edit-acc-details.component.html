@@ -1,0 +1,27 @@
+<div class="box has-text-centered has-background-white">
+    <form id="center" [formGroup] = "EditAccDetailsForm"> 
+        <div class="field has-addons">
+          <label class="label">Username: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <div class="control">
+            <input id="editInp" class="input is-success form-control" type="text" formControlName = "username" [(ngModel)]="userObj.username" [readOnly]="!isEdit" #newUserName>
+          </div>
+          <div class="control">
+            <button (click)="toggle()" id="editButton" class="button is-primary">
+              <span class="icon is-small">
+                <i class="fas fa-edit"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <input id="id" class="input is-success form-control" type="text" formControlName = "id" [(ngModel)]="userObj._id" #id>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <a id="butCent" (click)="saveEdit(newUserName.value, id.value)" class="button is-primary is-medium" routerLink="/user-dash/profile">Save</a>
+            </div>
+        </div>
+    </form>
+</div>

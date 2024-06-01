@@ -1,0 +1,26 @@
+<form formName="collegeForm"></form>
+    <div id="cont">
+    <div class="card is-spaced">
+        <div class="field">
+            <h1 id="rem-point" class="title is-2">Upload a photo</h1>
+        </div>
+        
+        <div class="level">
+            <div class="level-item">
+                <div class="field has-addons">
+                    <div class="control">
+                        <label for="photo">Upload a photograph</label>
+                        <input class="input is-success" (change)="select($event)" formControlName="image" type="file" name="photo">
+                        <p class="has-text-danger">Photograph must have a maximum dimension of 100x100px</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toright" class="field">
+            <div class="control">
+                <button (click)="updatePhoto()" class="button is-primary is-medium">Continue</button>
+            </div>
+        </div>
+    </div>
+    </div>

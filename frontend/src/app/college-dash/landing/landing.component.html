@@ -1,0 +1,46 @@
+<section id="cont" class="container">
+    <div class="columns">
+        <div class="column is-3">
+            <a class="button is-primary is-block is-alt is-large" routerLink="/college-dash/new-election">+ New election</a>
+            <br>
+            <div class="container" *ngFor="let item of elections">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">{{ item.election_name }}</p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        Deadline: {{ item.deadline }}
+                        <br>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                      <a *ngIf="item.finished == false" (click)="openElection(item.election_name)" class="card-footer-item has-text-info">View Status</a>
+                      <a *ngIf="item.finished == true" (click)="viewResults(item.election_name)" class="card-footer-item has-text-primary">View Results</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div class="column is-9">
+            <div class="message is-large">
+                <div class="message-header has-background-primary">
+                    <p>Authorization requests</p>
+                </div>
+            </div>
+            <div *ngFor="let item of requests" class="box content level">
+                <p id="large" class="level-item has-text-centered">
+                    <b>{{item.first_name}}&nbsp;{{item.last_name}}</b>
+                </p> 
+                <p class="level-item">
+                    {{item.course}}&nbsp;{{item.branch}}
+                </p>
+                <p class="level-item">
+                    Year of study: {{item.year}}
+                </p>
+                <p class="level-item">
+                    <a class="button is-primary" (click)="viewRequest(item.email)">View</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
