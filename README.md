@@ -1,7 +1,6 @@
 # eVote_using_HyperledgerFabric
 
-This repository contains the chaincode for managing election candidates using Hyperledger Fabric. The chaincode provides functionality to add, update, delete, and query candidates and their votes. it is a demo project to store candidates details in blockchain uses hyper ledger fabric samples test-network.the installation sepcified for ``` Arch based distro ```
-
+This repository contains the code for an e-voting application that leverages the MEAN stack for the web application and Hyperledger Fabric for secure storage of election data. The application provides functionality to manage election candidates and store votes securely on the blockchain. It utilizes the Hyperledger Fabric samples test-network for blockchain interactions and is specifically designed for installation on ```Arch-based distributions```.
 
 ## Table of Contents
 
