@@ -84,4 +84,3 @@ Before you Build, you need to have the following prerequisites installed:
 1. run ``` . set_path.sh``` in terminals where querryCandidate.js and block_details.sh  is going to run
 2. run ``` sh stop_network.sh``` to stop the network and remove files
 3. refer hyper ledger fabric docs for any doubts
-https://github.com/Abhishek3917/HyperledgerVoting.git
